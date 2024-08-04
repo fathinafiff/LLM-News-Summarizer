@@ -4,6 +4,13 @@
 
 This project provides a web application that allows users to input search queries for news articles, which are then summarized using a Groq API. The application retrieves news articles, processes them, and displays both the summarized content and the sources of the information.
 
+Here's a demonstration of how the application works:
+
+
+<div>
+  <img align="center" src="references/example.gif">
+</div>
+
 ## Directory Structure
 
 ```plaintext
@@ -11,11 +18,11 @@ This project provides a web application that allows users to input search querie
 ├── requirements.txt
 ├── src
 │  ├── __init__.py
-│  │  ├── __init__.cpython-310.pyc
-│  │  ├── detik_scraper.cpython-310.pyc
-│  │  └── utils.cpython-310.pyc
 │  ├── detik_scraper.py
 │  └── utils.py
+├── static
+│  ├── script.js
+│  └── styles.css
 └── templates
    └── index.html
 ```
@@ -48,6 +55,18 @@ Contains utility functions:
 - `extract_popular_words(articles: List[str]) -> List[str]`: Extracts popular words from a list of article texts.
 - `clean_article_text(text: str) -> str`: Cleans the article text by removing unwanted elements such as advertisements.
 - `summarize_with_groq(api_key: str, text: str, keywords: List[str]) -> str`: Summarizes the provided text using the Groq API.
+
+### `static/`
+
+The directory containing static files such as CSS and JavaScript.
+
+#### `script.js`
+
+JavaScript file for handling form submission and showing the loading spinner.
+
+#### `styles.css`
+
+CSS file for styling the web application, including the loading spinner.
 
 ### `templates/`
 
