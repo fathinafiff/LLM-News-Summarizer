@@ -4,9 +4,6 @@
 
 This project provides a web application that allows users to input search queries for news articles, which are then summarized using a Groq API. The application retrieves news articles, processes them, and displays both the summarized content and the sources of the information.
 
-Here's a demonstration of how the application works:
-
-
 <div>
   <img align="center" src="references/example.gif">
 </div>
