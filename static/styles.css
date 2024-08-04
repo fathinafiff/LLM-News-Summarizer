@@ -1,18 +1,51 @@
-/* styles.css */
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* Spinner styling */
+.spinner-border {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border-width: .4em;
+  margin: 1rem auto;
+}
+
+.spinner-border.show {
+  display: inline-block;
+}
+
+/* Summary and source list styling */
 .summary {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    margin-top: 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  .source-list {
-    margin-top: 20px;
-  }
-  .spinner-border {
-    display: none;
-  }
-  .spinner-border.show {
-    display: inline-block;
-  }
-  
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.source-list {
+  list-style: none;
+  padding: 0;
+}
+
+.source-list li {
+  margin: 5px 0;
+}
+
+.source-list a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.source-list a:hover {
+  text-decoration: underline;
+}
