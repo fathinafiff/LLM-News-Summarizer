@@ -8,23 +8,15 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <style>
-      .summary {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        margin-top: 20px;
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-      .source-list {
-        margin-top: 20px;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
   </head>
   <body>
     <div class="container">
       <h1 class="mt-5">News Summarizer</h1>
-      <form method="post" class="mt-3">
+      <form method="post" class="mt-3" id="summarizer-form">
         <div class="form-group">
           <label for="query">Enter search query:</label>
           <input
@@ -37,6 +29,10 @@
           />
         </div>
         <button type="submit" class="btn btn-primary">Get Summary</button>
+        <!-- Loading spinner -->
+        <div class="spinner-border text-primary mt-3" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
       </form>
 
       {% if summary %}
@@ -53,5 +49,7 @@
       </ul>
       {% endif %}
     </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>

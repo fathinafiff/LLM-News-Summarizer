@@ -1,0 +1,19 @@
+/* styles.css */
+.summary {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .source-list {
+    margin-top: 20px;
+  }
+  /* Loading spinner styles */
+  .spinner-border {
+    display: none; /* Hidden by default */
+  }
+  .spinner-border.show {
+    display: inline-block; /* Show spinner when adding class 'show' */
+  }
+  
