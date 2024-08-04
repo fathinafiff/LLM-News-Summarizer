@@ -82,7 +82,7 @@ The HTML template file for the main page of the Flask application. It provides a
    cd <repository-directory>
    ```
 
-2. **Set up a virtual environment**:
+2. **Set up a virtual environment**: (optional)
 
    ```bash
    python -m venv venv

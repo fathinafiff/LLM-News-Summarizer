@@ -29,6 +29,9 @@
           />
         </div>
         <button type="submit" class="btn btn-primary">Get Summary</button>
+        <button type="button" class="btn btn-secondary" id="clear-button">
+          Clear
+        </button>
         <!-- Loading spinner -->
         <div class="spinner-border text-primary mt-3" role="status">
           <span class="sr-only">Loading...</span>
@@ -43,7 +46,7 @@
       <ul class="source-list">
         {% for source in sources %}
         <li>
-          <a href="{{ source.link }}" target="_blank">{{ source.title }}</a>
+          <a href="{{ source.link }}" target="_blank">{{ source.judul }}</a>
         </li>
         {% endfor %}
       </ul>

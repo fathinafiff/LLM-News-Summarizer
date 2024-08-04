@@ -24,6 +24,7 @@ api_key = os.getenv("GROQ_API")
 @app.route("/", methods=["GET", "POST"])
 def index():
     summary = ""
+    results = []
     if request.method == "POST":
         query = request.form.get("query")
         if query:
@@ -41,8 +42,8 @@ def index():
             # Get the summary
             summary = summarize_with_groq(api_key, text_to_summarize, popular_words)
 
-    return render_template("index.html", summary=summary)
+    return render_template("index.html", summary=summary, sources=results)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3000)
