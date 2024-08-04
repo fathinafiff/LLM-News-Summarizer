@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Summarizer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .summary {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .source-list {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">News Summarizer</h1>
+      <form method="post" class="mt-3">
+        <div class="form-group">
+          <label for="query">Enter search query:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="query"
+            name="query"
+            placeholder="Enter topic"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Get Summary</button>
+      </form>
+
+      {% if summary %}
+      <h2 class="mt-5">Summary:</h2>
+      <p class="summary">{{ summary }}</p>
+
+      <h3 class="mt-5">Sources:</h3>
+      <ul class="source-list">
+        {% for source in sources %}
+        <li>
+          <a href="{{ source.link }}" target="_blank">{{ source.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </body>
+</html>
