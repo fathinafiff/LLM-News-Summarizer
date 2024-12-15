@@ -1,4 +1,0 @@
-nltk==3.8.1
-groq==0.9.0
-Flask==1.1.2
-python-dotenv==1.0.1
