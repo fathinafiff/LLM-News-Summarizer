@@ -67,3 +67,17 @@ body {
 .source-list a:hover {
   text-decoration: underline;
 }
+
+.bg-light.border {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 0.25rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  font-weight: normal;
+}
