@@ -33,6 +33,7 @@ def index():
                 
             except Exception as e:
                 summary = f"Error processing articles: {str(e)}"
+                key_sentences = []
     
     return render_template(
         "index.html", 

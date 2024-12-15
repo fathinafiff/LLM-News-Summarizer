@@ -16,7 +16,7 @@ body {
   display: none;
   width: 3rem;
   height: 3rem;
-  border-width: .4em;
+  border-width: 0.4em;
   margin: 1rem auto;
 }
 
@@ -24,12 +24,30 @@ body {
   display: inline-block;
 }
 
+.btn-outline-primary.btn-block {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapsed .collapse-icon {
+  transform: rotate(-90deg);
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Summary and source list styling */
 .summary {
   background: #ffffff;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .source-list {
