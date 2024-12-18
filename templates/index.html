@@ -34,11 +34,11 @@
       </button>
       <div class="collapse" id="originalArticles">
         <div class="card card-body mt-2">
-          {% for article in summary_details.original_articles %}
+          {% for result in sources %}
           <div class="mb-3">
-            <h6>Article {{ article.index }}</h6>
-            <small class="text-muted">Length: {{ article.length }} characters</small>
-            <p>{{ article.text }}</p>
+            <h6>Article {{ loop.index }}</h6>
+            <small class="text-muted">Length: {{ result.body|length }} characters</small>
+            <p>{{ result.body }}</p>
           </div>
           {% endfor %}
         </div>
@@ -57,7 +57,7 @@
           {% for sent in summary_details.sentence_details %}
           <div class="mb-3 p-2 {% if sent in summary_details.selected_sentences %}bg-light border{% endif %}">
             <div class="d-flex justify-content-between">
-              <strong>Sentence {{ sent.index }}</strong>
+              <strong>Sentence {{ loop.index }}</strong>
               <span class="text-muted">Score: {{ "%.3f"|format(sent.score) }}</span>
             </div>
             <p>{{ sent.text }}</p>
@@ -82,18 +82,23 @@
     <div class="mt-4">
       <h2>Final Summary:</h2>
       <div class="summary">
+        {% if summary_details is string %}
+        {{ summary_details }}
+        {% else %}
         {{ summary_details.final_summary }}
+        {% endif %}
       </div>
-
-      <h3 class="mt-4">Sources:</h3>
-      <ul class="source-list">
-        {% for source in sources %}
-        <li>
-          <a href="{{ source.link }}" target="_blank">{{ source.judul }}</a>
-        </li>
-        {% endfor %}
-      </ul>
     </div>
+
+    <!-- Sources -->
+    <h3 class="mt-4">Sources:</h3>
+    <ul class="source-list">
+      {% for source in sources %}
+      <li>
+        <a href="{{ source.link }}" target="_blank">{{ source.judul }}</a>
+      </li>
+      {% endfor %}
+    </ul>
     {% endif %}
   </div>
 
