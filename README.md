@@ -65,13 +65,21 @@ This project provides a web application that allows users to input search querie
    uv sync
    ```
 
-4. **Run the Flask application**:
+4. Make sure to create `.env` file
+
+   ```
+   cp .env.example .env
+   ```
+
+5. Fill in the values of Api From Groq Console
+
+6. **Run the Flask application**:
 
    ```bash
    python app.py
    ```
 
-5. **Access the application** at `http://127.0.0.1:3333/`
+7. **Access the application** at `http://127.0.0.1:3333/`
 
 ## Usage
 
